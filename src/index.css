@@ -1,13 +1,58 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@layer base {
+  :root {
+    --color-text-primary: #ffffff;
+    --color-text-secondary: #c7d2fe;
+    --color-text-inverted: #4f46e5; /* represents the color of text contrasting to the primary color */
+    --color-bg-primary: #4338ca;
+    --color-button-accent: #ffffff;
+    --color-button-accent-hover: #eef2ff;
+    --color-button-muted: #6366f1;
+
+    /* FONT TYPES */
+    --header-font: "League Spartan";
+    --normal-font: "Roboto";
+    --digit-font: "Orbitron";
+
+    /* TEXT SIZES */
+    --text-3xl: 1.5rem;
+    --text-2xl: 1.25rem;
+    --text-xl: 1.1rem;
+    --text-medium: 1rem;
+    --text-small: 0.9rem;
+    --text-xs: 0.8rem;
+  }
+
+  .theme-red {
+    --color-text-primary: #ffffff;
+    --color-text-secondary: #fecaca;
+    --color-text-inverted: #dc2626; /* represents the color of text contrasting to the primary color */
+    --color-bg-primary: #b91c1c;
+    --color-button-accent: #ffffff;
+    --color-button-accent-hover: #fef2f2;
+    --color-button-muted: #ef4444;
+  }
+
+  .theme-dark {
+    --color-text-primary: #f1f2f6;
+    --color-text-secondary: #dfe4ea;
+    --color-text-inverted: #57606f; /* represents the color of text contrasting to the primary color */
+    --color-bg-primary: #2f3542;
+    --color-button-accent: #f1f2f6;
+    --color-button-accent-hover: #dfe4ea;
+    --color-button-muted: #57606f;
+  }
+
+  .theme-light {
+    --color-text-primary: #2f3542;
+    --color-text-secondary: #57606f;
+    --color-text-inverted: #f1f2f6; /* represents the color of text contrasting to the primary color */
+    --color-bg-primary: #f1f2f6;
+    --color-button-accent: #2f3542;
+    --color-button-accent-hover: #dfe4ea;
+    --color-button-muted: #cfd4da;
+  }
 }
